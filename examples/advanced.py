@@ -18,3 +18,18 @@ def trace(matrix: list[list[float]]) -> float:
     if not is_square(matrix):
         raise ValueError("Матрица не квадратная")
     return sum(matrix[i][i] for i in range(len(matrix)))
+
+def is_symmetric(matrix: list[list[float]]) -> bool:
+    """
+    проверяет,симетрична ли квадратная матрица
+    
+    выбрасывает ValueError если матрица не квадратная"""
+
+    if not is_square(matrix):
+        raise ValueError("Матрица не квадратная")
+    n = len(matrix)
+    for i in range(n):
+        for j in range(i + 1, n):
+            if matrix[i][j] != matrix[j][i]:
+                return False
+    return True
