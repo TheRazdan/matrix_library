@@ -9,6 +9,7 @@ def is_square(matrix: list[list[float]]) -> bool:
             return False
     return True
 
+
 def trace(matrix: list[list[float]]) -> float:
     """
     Возращаем след квадратной матрицы
@@ -18,6 +19,7 @@ def trace(matrix: list[list[float]]) -> float:
     if not is_square(matrix):
         raise ValueError("Матрица не квадратная")
     return sum(matrix[i][i] for i in range(len(matrix)))
+
 
 def is_symmetric(matrix: list[list[float]]) -> bool:
     """
