@@ -23,7 +23,7 @@ def create_matrix(rows, cols, default_value=0):
     return [[default_value for _ in range(cols)] for _ in range(rows)]
 
 
-def create_identity_matrix(n):
+def create_iden_matrixtity(n):
     """
     Создаёт единичную матрицу заданного размера.
 
