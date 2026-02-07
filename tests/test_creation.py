@@ -1,7 +1,10 @@
 import pytest
 import random
-from .creation import *
-
+from ..examples.creation import create_matrix
+from ..examples.creation import create_matrix_from_list
+from ..examples.creation import create_random_matrix
+from ..examples.creation import create_zero_matrix
+from ..examples.creation import create_iden_matrixtity
 
 def test_create_matrix_basic():
     m = create_matrix(2, 3, 0)
@@ -16,14 +19,14 @@ def test_create_matrix_invalid_size():
 
 def test_create_identity_matrix_basic():
     """Тест создания базовой единичной матрицы"""
-    m = create_identity_matrix(3)
+    m = create_iden_matrixtity(3)
     assert len(m) == 3
     assert len(m[0]) == 3
 
 def test_create_identity_matrix_invalid_size():
     """Тест с недопустимым размером"""
     with pytest.raises(ValueError):
-        create_identity_matrix(0)
+        create_iden_matrixtity(0)
 
 # ----------------------------------    
 
