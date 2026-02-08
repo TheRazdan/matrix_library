@@ -1,10 +1,13 @@
 import pytest
 import random
-from ..matrix_operations.creation import create_matrix
-# from ..matrix_operations.creation import create_matrix_from_list
-# from ..matrix_operations.creation import create_random_matrix
-# from ..matrix_operations.creation import create_zero_matrix
-# from ..matrix_operations.creation import create_iden_matrixtity
+from matrix_operations import (
+    create_matrix,
+    create_matrix_from_list,
+    create_random_matrix,
+    create_zero_matrix,
+    create_iden_matrixtity
+)
+
 
 def test_create_matrix_basic():
     m = create_matrix(2, 3, 0)
