@@ -4,3 +4,4 @@ from matrix_operations import (
     is_square,
     trace
 )
+
