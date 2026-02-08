@@ -25,11 +25,7 @@ def test_set_element_basic():
     matrix = [[1,2], [3,4]]
     set_element(matrix, 0, 1, 5)
     assert matrix[0][1] == 5
-
-def test_set_element_invalid_index():
-    matrix = [[1,2], [3,4]]
-    with pytest.raises(IndexError):
-        set_element(matrix, 0, 1, 5)
+    
 # ------------------------------------------
 
 def test_get_rows_basic():

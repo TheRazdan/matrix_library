@@ -37,14 +37,11 @@ def set_element(matrix: list[list[int]], row: int, col: int, value: int) -> None
         IndexError: Если координаты выходят за пределы матрицы.
     """
     
-    if not 0 <= row < len(matrix):
-        raise IndexError(f"Индекс строки {row} выходит за пределы матрицы (0-{len(matrix)-1})")
-    
-    if not 0 <= col < len(matrix[0]):
-        raise IndexError(f"Индекс столбца {col} выходит за пределы матрицы (0-{len(matrix[0])-1})")
+    if row < 0 or row >= len(matrix) or col < 0 or col >= len(matrix[0]):
+        raise IndexError(f"Индекс ({row},{col} выходят за границы матрицы {len(matrix)} x {len(matrix[0])})")
     
     matrix[row][col] = value
-
+    
 
 def get_rows(matrix: list[list[int]]) -> int:
     """
