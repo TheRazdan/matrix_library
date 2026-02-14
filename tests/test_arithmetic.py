@@ -12,7 +12,7 @@ def test_add_matrix():
     assert result == [[6,8],[10, 12]]
 
 def test_add_matrices_different_sizes():
-    with pytest.raises(TypeError):
+    with pytest.raises(ValueError):
         add_matrices([[1,2], [3,4], [5,6]])
 
 # ----------------------------------------------------------
@@ -38,7 +38,7 @@ def test_multiply_matrices():
     assert result == [[19,22], [43,50]]
 
 def test_multiply_matrices_incompatible_size():
-    with pytest.raises(TypeError):
+    with pytest.raises(ValueError):
         multiply_matrices([[1,2]], [[3], [4]])
 
 # ----------------------------------------------------------
