@@ -21,15 +21,15 @@ def test_subtract_matrices():
     result = subtract_matrices([[5,6], [7,8]], [[1,2], [3,4]])
     assert result == [[4,4],[4,4]]
 
-def test_subtract_matrices_different_size():
+def test_add_matrices_different_sizes():
     with pytest.raises(ValueError):
-        subtract_matrices([[1]], [[1,2]])
+        add_matrices([[1, 2], [3, 4]], [[1, 2, 3], [4, 5, 6]])
 
 # ----------------------------------------------------------
 
 def test_multiply_by_scalar():
     result = multiply_by_scalar([[1,2],[3,4]], 2)
-    assert result == [[19, 22], [43,50]]
+    assert result == [[2,4],[6,8]]
 
 # ----------------------------------------------------------
 

@@ -1,8 +1,6 @@
 def is_square(matrix: list[list[float]]) -> bool:
-    """
-    Проеряет,является ли матрица квадратной. Пусая матрица 
-    считается как 0 x 0 и считается квадратной"""
-
+    if not matrix:
+        return False
     n = len(matrix)
     for row in matrix:
         if len(row) != n:
